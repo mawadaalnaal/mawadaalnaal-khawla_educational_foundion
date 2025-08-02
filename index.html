@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة خولة التعليمية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header id="main-header">
+        <img src="images/logo.png" alt="شعار المؤسسة">
+        
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="قائمة التنقل">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+       <nav id="main-nav">
+    <ul>
+        <li><a href="#about"><i class="fas fa-info-circle"></i> من نحن</a></li>
+        <li><a href="#achievements"><i class="fas fa-trophy"></i> الإنجازات</a></li>
+        <li><a href="#courses"><i class="fas fa-book-open"></i> الدورات</a></li>
+        <li class="contact-btn"><a href="#contact">تواصل معنا</a></li>
+    </ul>
+</nav>
+    </header>
+
+    <!-- القسم الترحيبي -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>مرحبًا بكم في مؤسسة خولة التعليمية</h1>
+            <p>لتعليم القرآن الكريم والدورات الشرعية</p>
+            <a href="#contact" class="btn">تواصل معنا</a>
+        </div>
+    </section>
+
+    <!-- الأقسام الرئيسية -->
+    <main>
+        <!-- من نحن -->
+        <section id="about" class="section">
+            <h2>من نحن</h2>
+            <p>مؤسسة خولة التعليمية تهدف إلى تعليم القرآن الكريم والدورات الشرعية وتنمية المهارات الفكرية والأخلاقية للطلاب. نحن نقدم بيئة تعليمية متميزة تجمع بين الأصالة والمعاصرة.</p>
+        </section>
+
+        <!-- الإنجازات -->
+        <section id="achievements" class="section">
+            <h2>إنجازاتنا</h2>
+            <div class="achievements">
+                <div class="card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>تخريج الحفاظ</h3>
+                    <p>تخريج أكثر من 200 طالب حافظ للقرآن</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-award"></i>
+                    <h3>مسابقات قرآنية</h3>
+                    <p>تنظيم 15 مسابقة قرآنية</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-book"></i>
+                    <h3>دورات شرعية</h3>
+                    <p>تقديم أكثر من 50 دورة شرعية</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- البرامج التعليمية -->
+        <section id="courses" class="section">
+            <h2>برامجنا التعليمية</h2>
+            <ul class="courses-list">
+                <li><i class="fas fa-book-quran"></i> حفظ القرآن الكريم</li>
+                <li><i class="fas fa-microphone-alt"></i> دورات التجويد</li>
+                <li><i class="fas fa-graduation-cap"></i> التفسير والفقه</li>
+                <li><i class="fas fa-hands-praying"></i> أحكام التلاوة</li>
+            </ul>
+        </section>
+    </main>
+     
+    <!-- نبذة عن صاحبة المؤسسة -->
+    <section id="about-owner" class="section">
+        <h2>نبذة عن صاحبة المؤسسة</h2>
+        <div class="owner-profile">
+            <img src="images/owner.jpg" alt="خولة بديع موسى" class="owner-image">
+            <div class="owner-bio">
+                <p>الأستاذة خولة بديع موسى، من مواليد دمشق عام 1953، مؤسسة لمؤسسة خولة التعليمية.</p>
+                <p>متزوجة ولديها ثلاثة أولاد يعملون في المجال الطبي، وزوجها شغل منصب عميد كلية التربية في جامعة دمشق.</p>
+                <p>كما شغل زوجها أيضاً منصب رئيس اتحاد الكتاب العرب في محافظة القنيطرة.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم تواصل معنا -->
+    <section class="contact-section" id="contact">
+        <h2>تواصل معنا</h2>
+        <div class="social-links">
+            <!-- واتساب -->
+            <a href="https://wa.me/message/B3WMNWQJGIUOD1" class="social-link" target="_blank">
+                <div class="social-icon whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <span class="social-name">واتساب</span>
+            </a>
+            
+            <!-- تلجرام -->
+            <a href="https://t.me/khawla_educational_foundion" class="social-link" target="_blank">
+                <div class="social-icon telegram">
+                    <i class="fab fa-telegram"></i>
+                </div>
+                <span class="social-name">تلجرام</span>
+            </a>
+            
+            <!-- انستجرام -->
+            <a href="https://www.instagram.com/khawla_educational_faundat?igsh=dmV5aW4wbTExNDZ0" class="social-link" target="_blank">
+                <div class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <span class="social-name">انستجرام</span>
+            </a>
+            
+            <!-- فيسبوك -->
+            <a href="https://www.facebook.com/khawla.educational.foundation?mibextid=ZbWKwL" class="social-link" target="_blank">
+                <div class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <span class="social-name">فيسبوك</span>
+            </a>
+        </div>
+    </section>
+
+  
+
+</body>
+</html>
