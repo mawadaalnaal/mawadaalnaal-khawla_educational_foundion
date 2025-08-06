@@ -178,6 +178,19 @@ nav ul li.contact-btn a:hover {
     overflow: hidden;
 }
 
+@media (max-width: 768px) {
+    .hero {
+        background-image: 
+            linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+            url('images/hero-mob.png');
+        background-size: contain;
+        background-position: center;
+        padding: 120px 20px 60px;
+    }
+}
+
+
+
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
@@ -604,6 +617,43 @@ footer:hover .copyright {
     color: var(--gold);
 }
 
+/* الصفحات الداخلية ثابتة في جميع أحجام الشاشات */
+.page {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.page .section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.page .section-content {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.page h2 {
+    margin-bottom: 30px;
+}
+
+.page p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
 /* استجابة للجوال */
 @media (max-width: 1200px) {
     .hero h1 {
@@ -659,7 +709,54 @@ footer:hover .copyright {
         position: relative;
     }
 
-    .mobile-menu-btn {
+    /* إخفاء اللوغو في الشاشات الصغيرة للصفحات الداخلية */
+    .page-header img {
+        display: none;
+    }
+
+    /* إظهار زر العودة في الشاشات الصغيرة */
+    .page-header .back-home {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        left: 20px;
+        top: 40px;
+        z-index: 1001;
+    }
+
+    .page-header .back-home a {
+        background-color: var(--turquoise);
+        color: var(--dark-blue);
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: 2px solid var(--turquoise);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 15px rgba(0, 166, 166, 0.3);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        z-index: 1001;
+        white-space: nowrap;
+        transition: all 0.3s ease;
+    }
+
+    .page-header .back-home a:hover {
+        background-color: transparent;
+        color: var(--turquoise);
+        box-shadow: 0 6px 20px rgba(0, 166, 166, 0.4);
+    }
+
+    /* إخفاء زر القائمة المتنقلة في الصفحات الداخلية */
+    .page-header .mobile-menu-btn {
+        display: none;
+    }
+
+    /* إظهار زر القائمة المتنقلة فقط في الصفحة الرئيسية */
+    header:not(.page-header) .mobile-menu-btn {
         display: flex !important;
         align-items: center;
         justify-content: center;
@@ -670,44 +767,36 @@ footer:hover .copyright {
         height: 40px;
         border-radius: 8px;
         cursor: pointer;
+        margin-right: 15px;
     }
 
-    @media (max-width: 768px) {
-        .mobile-menu-btn {
-            display: flex !important;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px; /* إضافة هامش من اليمين */
-        }
-    
-        nav {
-            position: fixed;
-            top: 80px;
-            right: -100%;
-            width: 250px;
-            height: calc(100vh - 80px);
-            background: var(--white);
-            padding: 20px;
-            transition: all 0.3s ease;
-            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-        }
-    
-        nav.active {
-            right: 0;
-        }
+    nav {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 250px;
+        height: calc(100vh - 80px);
+        background: var(--white);
+        padding: 20px;
+        transition: all 0.3s ease;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     }
+
+    nav.active {
+        right: 0;
+    }
+
     nav ul {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     nav ul li a {
         padding: 12px 15px;
         width: 100%;
         justify-content: flex-start;
     }
-    }
-    
+
     nav ul li.contact-btn a {
         margin-left: 0;
         margin-top: 10px;
@@ -718,70 +807,68 @@ footer:hover .copyright {
         display: inline-flex;
         justify-content: center;
     }
-    
+
     /* تعديلات قسم التواصل في الجوال */
     .contact-section {
         padding: 60px 15px;
     }
-    
+
     .social-links {
         gap: 20px;
     }
-    
+
     .social-link {
         width: 80px;
     }
-    
+
     .social-icon {
         width: 60px;
         height: 60px;
         font-size: 1.8rem;
     }
-    
+
     .social-name {
         font-size: 0.95rem;
     }
-    
 
     @media (max-width: 480px) {
         nav {
             width: 280px;
         }
-        
+
         nav ul li a {
             padding: 12px 20px;
             font-size: 0.9rem;
-           
         }
-        
-        /* مزيد من التعديلات لقسم التواصل في الشاشات الصغيرة */
+
         .social-links {
             gap: 15px;
         }
-        
+
         .social-link {
             width: 70px;
         }
-        
+
         .social-icon {
             width: 50px;
             height: 50px;
             font-size: 1.5rem;
         }
-        
+
         .social-name {
             font-size: 0.85rem;
         }
-        
+
         .contact-info p {
             font-size: 1rem;
             flex-direction: column;
             gap: 5px;
         }
-        
+
         .contact-info i {
             font-size: 1.3rem;
         }
+    }
 }
 
    #main-nav ul {
